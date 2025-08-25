@@ -25,7 +25,7 @@ from nav2_common.launch import ReplaceString, RewrittenYaml
 
 def generate_launch_description():
     
-    bringup_dir = get_package_share_directory('rpp_controller_pgk')
+    bringup_dir = get_package_share_directory('rpp_controller_pkg')
     
     # 构建launch文件目录路径
     # 包含导航相关的启动文件

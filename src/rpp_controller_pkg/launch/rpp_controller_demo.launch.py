@@ -3,7 +3,7 @@ Autor: wei.canming
 Version: 1.0
 Date: 2025-07-18 16:21:40
 LastEditors: wei.canming
-LastEditTime: 2025-08-05 10:35:49
+LastEditTime: 2025-08-25 14:19:50
 Description: 
 '''
 #!/usr/bin/env python3
@@ -23,7 +23,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 def generate_launch_description():
     # 获取包的路径
-    pkg_dir = get_package_share_directory('rpp_controller_pgk')
+    pkg_dir = get_package_share_directory('rpp_controller_pkg')
     
     # 定义launch参数  
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
@@ -114,12 +114,12 @@ def generate_launch_description():
     # 'bash', '-c' 保持终端不关闭
     path_publisher_process = ExecuteProcess(
             cmd=[
-                'gnome-terminal', '--', 'bash', '-c', 'ros2 run rpp_controller_pgk path_publisher'
+                'gnome-terminal', '--', 'bash', '-c', 'ros2 run rpp_controller_pkg path_publisher'
             ],
             shell=False
         )
     # path_publisher_node = Node(
-    #     package='rpp_controller_pgk',
+    #     package='rpp_controller_pkg',
     #     executable='path_publisher',
     #     name='path_publisher',
     #     output='screen',

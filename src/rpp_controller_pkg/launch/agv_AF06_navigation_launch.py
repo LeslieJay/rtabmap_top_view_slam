@@ -71,7 +71,7 @@ from nav2_common.launch import RewrittenYaml
 
 def generate_launch_description():
     
-    bringup_dir = get_package_share_directory('rpp_controller_pgk')
+    bringup_dir = get_package_share_directory('rpp_controller_pkg')
 
     namespace = LaunchConfiguration('namespace')          # 命名空间配置
     use_sim_time = LaunchConfiguration('use_sim_time')    # 仿真时间开关

@@ -14,11 +14,11 @@ source /opt/ros/humble/setup.bash
 # 构建包
 # echo "Building package..."
 # cd $(dirname "$0")/../..
-# colcon build --packages-select rpp_controller_pgk
+# colcon build --packages-select rpp_controller_pkg
 
 # 设置环境
 source install/setup.bash
 
 # 启动仿真环境
 echo "Launching RPP controller demo..."
-ros2 launch rpp_controller_pgk rpp_controller_demo.launch.py 
+ros2 launch rpp_controller_pkg rpp_controller_demo.launch.py 

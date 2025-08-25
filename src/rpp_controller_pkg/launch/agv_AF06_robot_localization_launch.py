@@ -24,7 +24,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 def generate_launch_description():
     # 获取包的路径
-    pkg_dir = get_package_share_directory('rpp_controller_pgk')
+    pkg_dir = get_package_share_directory('rpp_controller_pkg')
     
     # 定义launch参数  
     use_sim_time = LaunchConfiguration('use_sim_time')
