@@ -1,0 +1,34 @@
+# 忽略编译目录
+build/
+install/
+log/
+dist/
+out/
+
+# CMake 相关
+# CMakeCache.txt
+# CMakeFiles/
+# cmake_install.cmake
+# Makefile
+
+# 可执行文件、目标文件
+*.out
+*.exe
+*.o
+*.so
+*.a
+*.lo
+*.la
+
+# 临时文件
+*.swp
+*.tmp
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VSCode / Cursor 设置
+.vscode/
+.history/
