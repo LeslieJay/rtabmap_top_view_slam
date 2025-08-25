@@ -1,0 +1,12 @@
+# request date
+int16 to_cargo_signal
+int16 cargo_goal_height
+int16 cargo_goal_rotation
+---
+# finally response
+bool height_finish
+bool rotation_finish
+---
+# continuous feedback
+int16 cargo_height
+int16 cargo_rotation

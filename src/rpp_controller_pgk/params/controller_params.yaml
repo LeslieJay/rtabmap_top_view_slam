@@ -1,0 +1,56 @@
+controller_server:  # 控制器服务器节点名称
+  ros__parameters:  # ROS2参数命名空间
+    use_sim_time: false  # 是否使用仿真时间（如Gazebo），True表示使用
+    controller_frequency: 20.0  # 控制循环频率，单位Hz
+    min_x_velocity_threshold: 0.001  # x方向最小速度阈值，低于该值视为0
+    min_y_velocity_threshold: 0.5  # y方向最小速度阈值，低于该值视为0
+    min_theta_velocity_threshold: 0.001  # 角速度最小阈值，低于该值视为0
+    progress_checker_plugin: "progress_checker"  # 进度检查插件名称
+    goal_checker_plugins: ["general_goal_checker"]  # 目标点检查插件列表
+    controller_plugins: ["FollowPath"]  # 控制器插件列表
+
+    # Progress checker parameters
+    progress_checker:  # 进度检查器参数
+      plugin: "nav2_controller::SimpleProgressChecker"  # 插件类型
+      required_movement_radius: 0.5  # 允许的最小移动半径（米）
+      movement_time_allowance: 10.0  # 允许的最大静止时间（秒）
+
+    # Goal checker parameters
+    general_goal_checker:  # 目标点检查器参数
+      plugin: "nav2_controller::SimpleGoalChecker"  # 插件类型
+      xy_goal_tolerance: 0.25  # 位置容差（米）
+      yaw_goal_tolerance: 0.25  # 朝向容差（弧度）
+      stateful: True  # 是否有状态（记忆上次状态）
+
+    # RPP controller parameters
+    FollowPath:  # 跟踪路径控制器参数
+      plugin: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController"  # 插件类型
+      use_collision_detection: false
+      desired_linear_vel: 0.2  # 期望线速度（米/秒）
+      max_linear_accel: 2.5  # 最大线加速度（米/秒²）
+      max_linear_decel: 2.5  # 最大线减速度（米/秒²）
+      lookahead_dist: 0.6  # 前瞻距离（米）
+      min_lookahead_dist: 0.3  # 最小前瞻距离（米）
+      max_lookahead_dist: 0.9  # 最大前瞻距离（米）
+      lookahead_time: 1.5  # 前瞻时间（秒）
+      rotate_to_heading_angular_vel: 1.8  # 旋转到目标角速度（弧度/秒）
+      transform_tolerance: 0.1  # 坐标变换容差（秒）
+      use_velocity_scaled_lookahead_dist: false  # 是否根据速度缩放前瞻距离
+      min_approach_linear_velocity: 0.05  # 最小靠近目标速度（米/秒）
+      approach_velocity_scaling_dist: 0.6  # 靠近目标时速度缩放距离（米）
+      use_regulated_linear_velocity_scaling: false  # 是否使用受控线速度缩放
+      use_cost_regulated_linear_velocity_scaling: false  # 是否根据代价缩放线速度
+      regulated_linear_scaling_min_radius: 0.9  # 线速度缩放的最小曲率半径（米）
+      regulated_linear_scaling_min_speed: 0.25  # 线速度缩放的最小速度（米/秒）
+      use_rotate_to_heading: true  # 是否启用旋转到目标朝向
+      rotate_to_heading_min_angle: 0.785  # 触发旋转的最小角度（弧度）
+      max_angular_accel: 3.2  # 最大角加速度（弧度/秒²）
+      allow_reversing: false  # 是否允许倒车
+      cost_scaling_dist: 0.3  # 代价缩放距离（米）
+      cost_scaling_gain: 1.0  # 代价缩放增益
+      inflation_cost_scaling_factor: 3.0  # 膨胀层代价缩放因子
+      regulate_linear_velocity_by_heading: false  # 是否根据航向调节线速度
+      heading_regulation_min_angle: 0.4  # 航向调节的最小角度（弧度）
+      heading_regulation_speed_scaling: 0.4  # 航向调节速度缩放因子
+
+    

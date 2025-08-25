@@ -1,0 +1,9 @@
+{
+  "package_name": "ref_slam_interface",
+  "non_idl_tuples": [
+    "/home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface:srv/SaveMap.srv",
+    "/home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface:action/CtrlFork.action",
+    "/home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface:msg/BatteryState.msg",
+    "/home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface:srv/BatteryControl.srv"
+  ]
+}

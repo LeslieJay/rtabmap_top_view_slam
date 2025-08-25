@@ -1,0 +1,56 @@
+[0.010s] Invoking command in '/home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface/build/ref_slam_interface': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(inu-python3.6) /usr/bin/cmake /home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface -DCMAKE_INSTALL_PREFIX=/home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface/install/ref_slam_interface
+[0.070s] -- The C compiler identification is GNU 11.4.0
+[0.140s] -- The CXX compiler identification is GNU 11.4.0
+[0.148s] -- Detecting C compiler ABI info
+[0.245s] -- Detecting C compiler ABI info - done
+[0.256s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.257s] -- Detecting C compile features
+[0.258s] -- Detecting C compile features - done
+[0.261s] -- Detecting CXX compiler ABI info
+[0.365s] -- Detecting CXX compiler ABI info - done
+[0.374s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.374s] -- Detecting CXX compile features
+[0.375s] -- Detecting CXX compile features - done
+[0.377s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.531s] -- Found Python3: /home/huanyue/.conda/envs/inu-python3.6/bin/python3 (found version "3.6.13") found components: Interpreter 
+[0.703s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.706s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.712s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.751s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.914s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[0.914s]   execute_process(/home/huanyue/.conda/envs/inu-python3.6/bin/python3 -m
+[0.914s]   rosidl_adapter --package-name ref_slam_interface --arguments-file
+[0.914s]   /home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface/build/ref_slam_interface/rosidl_adapter__arguments__ref_slam_interface.json
+[0.915s]   --output-dir
+[0.915s]   /home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface/build/ref_slam_interface/rosidl_adapter/ref_slam_interface
+[0.915s]   --output-file
+[0.915s]   /home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface/build/ref_slam_interface/rosidl_adapter/ref_slam_interface.idls)
+[0.915s]   returned error code 1:
+[0.915s] 
+[0.915s]   Traceback (most recent call last):
+[0.915s] 
+[0.915s]     File "/home/huanyue/.conda/envs/inu-python3.6/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+[0.915s]       "__main__", mod_spec)
+[0.915s]     File "/home/huanyue/.conda/envs/inu-python3.6/lib/python3.6/runpy.py", line 85, in _run_code
+[0.915s]       exec(code, run_globals)
+[0.915s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.915s]       sys.exit(main())
+[0.915s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 55, in main
+[0.915s]       pathlib.Path(relative_path), output_dir)
+[0.915s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 23, in convert_to_idl
+[0.915s]       from rosidl_adapter.srv import convert_srv_to_idl
+[0.915s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/srv/__init__.py", line 16, in <module>
+[0.915s]       from rosidl_adapter.resource import expand_template
+[0.915s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/resource/__init__.py", line 19, in <module>
+[0.915s]       import em
+[0.915s] 
+[0.915s]   ModuleNotFoundError: No module named 'em'
+[0.916s] 
+[0.916s] Call Stack (most recent call first):
+[0.916s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.916s]   CMakeLists.txt:19 (rosidl_generate_interfaces)
+[0.916s] 
+[0.916s] [0m
+[0.916s] -- Configuring incomplete, errors occurred!
+[0.916s] See also "/home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface/build/ref_slam_interface/CMakeFiles/CMakeOutput.log".
+[0.921s] Invoked command in '/home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface/build/ref_slam_interface' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(inu-python3.6) /usr/bin/cmake /home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface -DCMAKE_INSTALL_PREFIX=/home/huanyue/weicanming/ros2_projects/usbcan_ws/src/ref_slam_interface/install/ref_slam_interface

@@ -1,0 +1,2 @@
+float64 float_x
+float64 float_angle

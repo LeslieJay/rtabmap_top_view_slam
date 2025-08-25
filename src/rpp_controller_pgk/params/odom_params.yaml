@@ -1,0 +1,21 @@
+
+odom_publisher:
+  ros__parameters:
+    # 发布频率 (Hz)
+    publish_frequency: 50.0
+    
+    # 坐标系名称
+    odom_frame: "odom"
+    base_frame: "base_link"
+    
+    # 初始位置
+    initial_x: 0.0
+    initial_y: 0.0
+    initial_theta: 0.0  # 弧度
+    
+    # 运动模式
+    simulate_motion: false  # true: 自动模拟运动, false: 根据cmd_vel运动
+    
+    # 模拟运动参数（仅当simulate_motion=true时有效）
+    linear_velocity: 0.1   # m/s
+    angular_velocity: 0.0  # rad/s 

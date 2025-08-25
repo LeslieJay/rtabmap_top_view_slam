@@ -1,0 +1,15 @@
+cmd_vel_listener:
+  ros__parameters:
+    left_speed_max: 1.0
+    left_speed_min: -1.0
+    left_stepspeed: 0.05
+    left_flexible: 15.0
+    left_jerk: 0.5
+    left_maxTimes: 0
+
+    right_speed_max: 1.0
+    right_speed_min: -1.0
+    right_stepspeed: 0.05
+    right_flexible: 15.0
+    right_jerk: 0.5
+    right_maxTimes: 0
